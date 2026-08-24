@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: auto; }
+body {
+  background-color: #F7F6F2;
+  background-image:
+    linear-gradient(rgba(20, 21, 28, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 21, 28, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #14151C;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+h1, h2, h3 { font-family: 'Space Grotesk', 'Inter', sans-serif; letter-spacing: -0.01em; }
+::selection { background: #4F46E5; color: #FFFFFF; }
+:focus-visible { outline: 2px solid #B8A7FF; outline-offset: 3px; }
+
+.btn-line {
+  display: inline-block; padding: 12px 22px; border: 1px solid #4F46E5;
+  border-radius: 4px; font-size: 0.84rem; letter-spacing: 0.03em; color: #14151C;
+  transition: background 0.35s cubic-bezier(0.16,1,0.3,1), border-color 0.35s, color 0.35s;
+}
+.btn-line:hover { background: #4F46E5; color: #FFFFFF; }
+.btn-ghost { border-color: rgba(15,17,28,0.10); color: #5B5F70; }
+.btn-ghost:hover { background: rgba(15,17,28,0.04); border-color: #5B5F70; color: #14151C; }
+
+.eyebrow {
+  display: inline-block; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #4F46E5; margin-bottom: 20px; font-weight: 600;
+}
+
+.scroll-fill { animation: scrollLineMove 1.8s cubic-bezier(0.16,1,0.3,1) infinite; }
+@keyframes scrollLineMove {
+  0% { top: -100%; } 60% { top: 100%; } 100% { top: 100%; }
+}
+
+.contact-orb { animation: orbFloat 8s ease-in-out infinite; }
+@keyframes orbFloat { 0%,100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, -18px); } }
+
+.marquee-track { animation: marqueeScroll 26s linear infinite; }
+.marquee-pause:hover .marquee-track { animation-play-state: paused; }
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.orbit-spin { animation: orbitSpin 14s linear infinite; }
+@keyframes orbitSpin { to { transform: rotate(360deg); } }
+.cube-float { animation: cubeFloat 5s ease-in-out infinite; }
+@keyframes cubeFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1); }
+.reveal.is-in { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+
