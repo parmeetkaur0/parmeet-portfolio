@@ -62,7 +62,7 @@ export default function Nav({ visible = true }) {
         <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 sm:px-6 md:px-12 lg:px-16 py-4 sm:py-4 md:py-5">
           {/* Logo */}
           <a
-            href="/dashboard"
+            href="/"
             className="font-display text-sm sm:text-base tracking-wide text-ink hover:text-[#7C83FF] transition-colors duration-300"
           >
             Parmeet Kaur
