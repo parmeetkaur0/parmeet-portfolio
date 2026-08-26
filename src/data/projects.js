@@ -49,7 +49,7 @@ const projects = [
     description:
       'A brand website for a crochet label — product showcase and storytelling built around a handmade, tactile aesthetic.',
     tags: ['React', 'Tailwind CSS', 'GSAP'],
-    liveUrl: '#',
+    liveUrl: 'https://shrivicreations.vercel.app',
   },
 
   {
